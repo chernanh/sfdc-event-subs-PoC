@@ -16,11 +16,11 @@ router.get('/', function(req, res, next) {
 /* Creates a new the record */
 router.post('/', function(req, res, next) {
 	console.log('In router post');
-	var newEvent = nforce.createSObject('Customer_Order__e');
-	newEvent.set('CustomerId__c', req.body.customerId);
-	newEvent.set('Product_Name__c', req.body.productName);
-	newEvent.set('Number_of_Units__c', req.body.numberOfUnits);
-	newEvent.set('Total_Amount__c', req.body.totalAmount);  
+	var newEvent = nforce.createSObject('vrk99__Testing_Event__e');
+	newEvent.set('vrk99__Customer_ID__c', req.body.customerId);
+	newEvent.set('vrk99__Event_Type__c', req.body.eventType);
+	newEvent.set('vrk99__Ban_Customer__c', req.body.bancustomer);
+	newEvent.set('vrk99__Parent_Event__c', req.body.parentEvent);  
 
 	org.org.insert({ sobject: newEvent })
   
