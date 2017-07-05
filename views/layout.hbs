@@ -72,9 +72,9 @@
 					console.log('In click');
 					var eventObj = {};
 					eventObj["customerId"] = $('#customerId').val();
-					eventObj["productName"] = $('#productName').val();
-					eventObj["numberOfUnits"] = $('#numberOfUnits').val();
-					eventObj["totalAmount"] = $('#totalAmount').val();
+					eventObj["eventType"] = $('#eventType').val();
+					eventObj["bancustomer"] = $('#bancustomer').val();
+					eventObj["parentEvent"] = $('#parentEvent').val();
 					console.log('eventObj: ' + JSON.stringify(eventObj));
 					$.post('/', eventObj, function(resp) {
 						console.log("post response: " + resp);
